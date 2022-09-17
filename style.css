@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  background: darkcyan;
+}
+.logo {
+  font-family: cursive;
+  font-weight: 800;
+  color: #fff;
+  font-size: xx-large;
+  text-shadow: -2px 3px 9px rgba(0, 0, 0, 0.2);
+}
+.left-nav {
+  flex: 1;
+}
+.game-container {
+  display: grid;
+  place-items: center;
+  background: whitesmoke;
+  height: 100vh;
+  width: 80%;
+  margin-inline: auto;
+}
+.board {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+@media screen and (min-width: 800px) {
+  .game-container {
+    width: 50%;
+    height: 80vh;
+  }
+}
+.draggable {
+  height: 31%;
+  width: 31%;
+}
+.draggable.checkSpace {
+  height: 33.333%;
+  width: 33.333%;
+  object-fit: cover;
+}
+.board.checkSpace {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  flex-wrap: wrap;
+  padding: 0px;
+}
+.drag-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.btn-container {
+  display: flex;
+  max-width: 10rem;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+.check {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  background: purple;
+  cursor: pointer;
+}
+.check:active {
+  transform: scale(0.98);
+}
+/* styles for alert */
+.alert {
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.9rem;
+}
+.alert.failure {
+  background-color: red;
+  color: white;
+}
+.alert.success {
+  background-color: lightgreen;
+  color: black;
+}
